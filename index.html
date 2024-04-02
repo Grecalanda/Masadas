@@ -106,10 +106,12 @@
                         <td class="visible-with-data" id="Tipo">' + (feature.properties['Tipo'] !== null ? autolinker.link(feature.properties['Tipo'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td class="visible-with-data" id="Partida"colspan="2"><strong>Partida</strong><br />' + (feature.properties['Partida'] !== null ? autolinker.link(feature.properties['Partida'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Partida</th>\
+                        <td class="visible-with-data" id="Partida">' + (feature.properties['Partida'] !== null ? autolinker.link(feature.properties['Partida'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td class="visible-with-data" id="Nombre"colspan="2"><strong>Nombre</strong><br />' + (feature.properties['Nombre'] !== null ? autolinker.link(feature.properties['Nombre'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Nombre</th>\
+                        <td class="visible-with-data" id="Nombre">' + (feature.properties['Nombre'] !== null ? autolinker.link(feature.properties['Nombre'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td class="visible-with-data" id="Fotog."colspan="2"><strong>Fotog.</strong><br />' + (feature.properties['Fotog.'] !== null ? '<img src="images/' + String(feature.properties['Fotog.']).replace(/[\\\/:]/g, '_').trim() + '">' : '') + '</td>\
@@ -156,7 +158,7 @@
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['Nombre'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['Nombre']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_MASADAS_1'});
+            layer.bindTooltip((layer.feature.properties['id'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['id']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_MASADAS_1'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
