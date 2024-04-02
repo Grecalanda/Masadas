@@ -116,6 +116,9 @@
                     <tr>\
                         <td class="visible-with-data" id="Fotog."colspan="2"><strong>Fotog.</strong><br />' + (feature.properties['Fotog.'] !== null ? '<img src="images/' + String(feature.properties['Fotog.']).replace(/[\\\/:]/g, '_').trim() + '">' : '') + '</td>\
                     </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>URL</strong><br />' + (feature.properties['URL'] !== null ? '<img src="images/' + String(feature.properties['URL']).replace(/[\\\/:]/g, '_').trim() + '">' : '') + '</td>\
+                    </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
             var popup = layer.getPopup();
