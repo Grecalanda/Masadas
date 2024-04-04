@@ -116,8 +116,7 @@
             <tr>\
                 '<img src="images/' + feature.properties['Fotog.'] + '">'
             <tr>\
-                <td colspan="2"><strong>URL</strong><br />' + (feature.properties['URL'] !== null ? '<img src="images/' + String(feature.properties['URL']).replace(/[\\\/:]/g, '_').trim() + '">' : '') + '</td>\
-            </tr>\
+               
         </table>';
     layer.bindPopup(popupContent, {maxHeight: 400});
     var popup = layer.getPopup();
