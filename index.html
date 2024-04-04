@@ -99,33 +99,34 @@
         });
         layer_ESRISatellite_0;
         map.addLayer(layer_ESRISatellite_0);
-        function pop_MASADAS_1(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <th scope="row">Tipo</th>\
-                        <td class="visible-with-data" id="Tipo">' + (feature.properties['Tipo'] !== null ? autolinker.link(feature.properties['Tipo'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Partida</th>\
-                        <td class="visible-with-data" id="Partida">' + (feature.properties['Partida'] !== null ? autolinker.link(feature.properties['Partida'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Nombre</th>\
-                        <td class="visible-with-data" id="Nombre">' + (feature.properties['Nombre'] !== null ? autolinker.link(feature.properties['Nombre'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        '<td class="visible-with-data" id="Fotog." colspan="2"><strong>Fotog.</strong><br />' + (feature.properties['Fotog.'] !== null ? '<img src="images/' + feature.properties['Fotog.'] + '">' : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2"><strong>URL</strong><br />' + (feature.properties['URL'] !== null ? '<img src="images/' + String(feature.properties['URL']).replace(/[\\\/:]/g, '_').trim() + '">' : '') + '</td>\
-                    </tr>\
-                </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
-            var popup = layer.getPopup();
-            var content = popup.getContent();
-            var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
-            popup.setContent(updatedContent);
-        }
+    function pop_MASADAS_1(feature, layer) {
+    var popupContent = '<table>\
+            <tr>\
+                <th scope="row">Tipo</th>\
+                <td class="visible-with-data" id="Tipo">' + (feature.properties['Tipo'] !== null ? autolinker.link(feature.properties['Tipo'].toLocaleString()) : '') + '</td>\
+            </tr>\
+            <tr>\
+                <th scope="row">Partida</th>\
+                <td class="visible-with-data" id="Partida">' + (feature.properties['Partida'] !== null ? autolinker.link(feature.properties['Partida'].toLocaleString()) : '') + '</td>\
+            </tr>\
+            <tr>\
+                <th scope="row">Nombre</th>\
+                <td class="visible-with-data" id="Nombre">' + (feature.properties['Nombre'] !== null ? autolinker.link(feature.properties['Nombre'].toLocaleString()) : '') + '</td>\
+            </tr>\
+            <tr>\
+                <td class="visible-with-data" id="Fotog." colspan="2"><strong>Fotog.</strong><br />' + (feature.properties['Fotog.'] !== null ? '<img src="images/' + feature.properties['Fotog.'] + '">' : '') + '</td>\
+            </tr>\
+            <tr>\
+                <td colspan="2"><strong>URL</strong><br />' + (feature.properties['URL'] !== null ? '<img src="images/' + String(feature.properties['URL']).replace(/[\\\/:]/g, '_').trim() + '">' : '') + '</td>\
+            </tr>\
+        </table>';
+    layer.bindPopup(popupContent, {maxHeight: 400});
+    var popup = layer.getPopup();
+    var content = popup.getContent();
+    var updatedContent = removeEmptyRowsFromPopupContent(content, feature);
+    popup.setContent(updatedContent);
+}
+
 
         function style_MASADAS_1_0() {
             return {
