@@ -114,8 +114,7 @@
                 <td class="visible-with-data" id="Nombre">' + (feature.properties['Nombre'] !== null ? autolinker.link(feature.properties['Nombre'].toLocaleString()) : '') + '</td>\
             </tr>\
             <tr>\
-                <td class="visible-with-data" id="Fotog." colspan="2"><strong>Fotog.</strong><br />' + (feature.properties['Fotog.'] !== null ? '<img src="images/' + feature.properties['Fotog.'] + '">' : '') + '</td>\
-            </tr>\
+                '<img src="images/' + feature.properties['Fotog.'] + '">'
             <tr>\
                 <td colspan="2"><strong>URL</strong><br />' + (feature.properties['URL'] !== null ? '<img src="images/' + String(feature.properties['URL']).replace(/[\\\/:]/g, '_').trim() + '">' : '') + '</td>\
             </tr>\
