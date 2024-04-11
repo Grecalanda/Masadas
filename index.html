@@ -114,7 +114,8 @@
                         <td class="visible-with-data" id="Nombre">' + (feature.properties['Nombre'] !== null ? autolinker.link(feature.properties['Nombre'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td class="visible-with-data" id="Fotog."colspan="2"><strong>Fotog.</strong><br />' + (feature.properties['Fotog.'] !== null ? '<img src="images/' + String(feature.properties['Fotog.']).replace(/[\\\/:]/g, '_').trim() + '">' : '') + '</td>\
+                        <th scope="row">Fotog.</th>\
+                        <td class="visible-with-data" id="Fotog.">' + (feature.properties['Fotog.'] !== null ? '<img src="images/' + String(feature.properties['Fotog.']).replace(/[\\\/:]/g, '_').trim() + '">' : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
